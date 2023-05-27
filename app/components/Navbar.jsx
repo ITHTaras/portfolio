@@ -15,7 +15,7 @@ function Navbar() {
           href={props.path}
           className={`nav-link ${
             pathname === props.path
-              ? "pointer-events-none text-slate-200"
+              ? "pointer-events-none text-gray-100 opacity-20"
               : "text-gray-300"
           }`}
         >
@@ -43,17 +43,24 @@ function Navbar() {
         {/* Features */}
         <div className="hidden lg:flex justify-center items-center">
           <PathLink path="/" text={langs[lang].home} />
-          <button
-            onClick={scrolly}
-            className={`nav-link ${
-              pathname === "/projects"
-                ? "text-gpointer-events-none text-slate-200"
-                : "text-gray-300"
-            }`}
-          >
-            {langs[lang].projects}
-          </button>
-          <h1 className="text-gray-400 mx-6 text-2xl">/</h1>
+          {pathname === "/" ? (
+            <>
+              <button
+                onClick={scrolly}
+                className={`nav-link ${
+                  pathname === "/projects"
+                    ? "pointer-events-none text-gray-100 opacity-20"
+                    : "text-gray-300"
+                }`}
+              >
+                {langs[lang].projects}
+              </button>
+              <h1 className="text-gray-400 mx-6 text-2xl">/</h1>
+            </>
+          ) : (
+            <PathLink path="/projects" text={langs[lang].projects} />
+          )}
+
           <PathLink path="/about" text={langs[lang].about} />
           <PathLink path="/hobbies" text={langs[lang].hobbies} />
         </div>

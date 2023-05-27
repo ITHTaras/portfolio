@@ -6,9 +6,9 @@ function Intro() {
 
   const scrolly = () => {
     const elem = document.getElementById("projects");
-    console.log(elem.getBoundingClientRect().top);
+
     window.scrollTo({
-      top: elem.getBoundingClientRect().top,
+      top: elem.offsetTop,
       behavior: "smooth",
     });
   };

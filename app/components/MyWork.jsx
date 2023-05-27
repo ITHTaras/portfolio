@@ -19,7 +19,8 @@ function MyWork() {
 
   return (
     <div className="relative text-gray-200" id="projects">
-      <div className="absolute left-[-9rem] pointer-events-none top-24 opacity-50 rounded-lg w-2/5 bg-[#06B6D4] blur-[140px] h-[60vh]"></div>
+      <div className="absolute left-[-11rem] pointer-events-none top-32 opacity-40 rounded-lg w-2/5 bg-[#06B6D4] blur-[140px] h-[60vh]"></div>
+      <div className="absolute right-4 lg:right-[-9rem] pointer-events-none top-3 opacity-30 rounded-lg w-2/5 bg-[#EAB308] blur-[140px] h-[60vh]"></div>
       <h2 className="text-4xl font-semibold">{langs[lang].projects}</h2>
       <div className="flex flex-col md:flex-row justify-between">
         <p className="mt-3 lg:w-[500px]">{langs[lang].projectsDesc}</p>
