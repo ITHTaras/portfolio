@@ -21,12 +21,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgb(17 24 39);
+  background: #191c38;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #e0e0e0;
+  background: #c5c5c5;
   border-radius: 10px;
 }
 
@@ -49,6 +49,16 @@
   list-style: none;
 }
 
-.h-first-section {
-  height: calc(100vh - 128px);
+@media screen and (min-width: 1024px) {
+  .h-first-section {
+    height: calc(100vh - 128px);
+  }
+}
+
+.homeblur {
+  transform: translate3d(0, 0, 0);
+}
+
+.notfound-block {
+  height: calc(100vh - 300px);
 }

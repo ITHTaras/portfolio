@@ -1,8 +1,10 @@
 "use client";
 import langs from "@/lang/langs";
+import Image from "next/image";
+import { useGlobalContext } from "../context/store";
 
 function Intro() {
-  const lang = "ua";
+  const { lang } = useGlobalContext();
 
   const scrolly = () => {
     const elem = document.getElementById("projects");
@@ -15,35 +17,21 @@ function Intro() {
 
   return (
     <div className="w-full h-first-section flex flex-col items-center">
-      <div className="w-[100%] flex flex-col items-center text-center text-gray-200">
-        <h2 className="text-5xl leading-[1.1] md:w-[570px]">
-          {langs[lang].ue}
-        </h2>
-        {/* <div className="flex flex-row items-center mt-7">
-          <h3 className="border-r-2 pr-4 mr-12 font-semibold text-lg border-r-gray-200">
-            Tech Stack
-          </h3>
-          <div>
-            <div className="flex gap-5 liststyle-none">
-              {techstacks.map((stack) => {
-                return (
-                  <Tooltip
-                    key={stack.name}
-                    text={stack.name}
-                    classes="w-[70px] h-auto bg-slate-400 bg-opacity-40 p-4 rounded-full"
-                  >
-                    <Image
-                      className="pos-relative"
-                      src={stack.img}
-                      alt=""
-                      fill
-                    />
-                  </Tooltip>
-                );
-              })}
-            </div>
-          </div>
-        </div> */}
+      <div className="flex flex-col lg:flex-row text-gray-200 justify-start items-center">
+        <Image
+          className="rounded-full object-contain lg:mr-24"
+          width={400}
+          height={400}
+          src="/images/my-photo.jpg"
+          alt=""
+        />
+        <div className="lg:ml-8 mt-10 max-lg:text-center">
+          <h6 className="text-xl">{langs[lang].hi}</h6>
+          <h2 className="text-5xl mt-3">Taras Hornik</h2>
+          <p className="xs:max-lg:w-3/5 xs:max-lg:mx-auto mt-3 text-lg text-slate-200 w-full xl:w-3/5">
+            {langs[lang].aboutMe}
+          </p>
+        </div>
       </div>
       <button
         onClick={scrolly}

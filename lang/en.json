@@ -1,13 +1,11 @@
 {
   "home": "Home",
   "projects": "My Work",
-  "about": "About",
-  "hobbies": "Hobbies",
-  "ue": "Crafting Memorable User Experiences for Business Success",
-  "iue": "I blend exquisite design with impeccable functionality for an exceptional user experience, while keeping users captivated.",
-  "projectsDesc": "Here are some of my design works that showcase my design skills and expertise.",
-  "frontend": "Frontend",
-  "backend": "Backend",
+  "hi": "Hello! I am",
+  "aboutMe": "a Fullstack Developer. I specialize on apps and websites development",
+  "projectsDesc": "Here are some examples of my work.",
+  "ecolife": "Mobile App \"EcoLife\" for waste sorting",
+  "realestate": "Real-estate website for apartment renting",
   "more": "More This Way",
   "tech": "Tech Stack"
 }

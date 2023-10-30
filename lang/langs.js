@@ -1,7 +1,7 @@
-import ua from "./ua.json";
+import de from "./de.json";
 import en from "./en.json";
 
 export default {
-  ua,
+  de,
   en,
 };
