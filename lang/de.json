@@ -4,9 +4,11 @@
   "about": "Über mich",
   "hi": "Hallo! Ich bin",
   "aboutMe": "Ein Fullstack-Entwickler. Meine Schwerpunkte sind die Anwendungs- und WEB-Entwicklung.",
-  "projectsDesc": "Der Teil meiner Arbeit. Klicken, um mehr davon zu sehen",
+  "projectsDesc": "Ein Teil meiner Arbeit. Klicken, um mehr davon zu sehen",
   "ecolife": "App \"EcoLife\" für die Mülltrennung",
-  "realestate": "Die Website für die Wohnungssuche",
+  "realestate": "Eine Website für Wohnungssuche",
+  "intrusionAlarm": "Ein digitaler Einbruchsalarm",
   "more": "Mehr davon",
-  "tech": "Tech Stack"
+  "tech": "Tech Stack",
+  "electronics": "Elektronik"
 }

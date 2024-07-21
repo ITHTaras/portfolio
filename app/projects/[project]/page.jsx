@@ -85,13 +85,56 @@ function project({ params }) {
         </div>
       </div>
     );
-  } else {
+  } else if (project && project.alias === "real-estate") {
     return (
       <div className="px-8 md:px-20 md:grid md:grid-cols-12 md:gap-4 h-[80vh]">
         <div className="relative w-full h-full col-span-9">
           <Image className="object-contain" src={project.img} fill alt="" />
         </div>
         <div className=""></div>
+      </div>
+    );
+  } else if (project && project.alias === "intrusion-alarm") {
+    return (
+      <div className="px-8 md:px-20">
+        <div className="md:grid md:grid-cols-12 md:gap-4 md:h-[80vh]">
+          <div className="relative w-full col-span-5">
+            <Image
+              className="object-contain h-[auto!important] max-h-full"
+              src={project.img}
+              fill
+              alt=""
+            />
+          </div>
+          <div className="max-md:mt-8 max-md:text-center max-md:px-6 md:col-span-7">
+            {lang == "de" ? (
+              <p className="text-slate-200 mt-3 lg:w-[500px]">
+                Ein Einbruchsalarm überprüft ständig die Lage des Reed-Kontaktes
+                und schaltet dementsprechend ein. Zum Ausschalten muss eine
+                vierstellige Kennnummer mithilfe eines Infrarotpults eingegeben
+                werden. Während der Eingabe werden die Kennziffern auf einem
+                LCD-Bildschirm abgebildet, der mithilfe eines transistorisierten
+                Logikgatters ein- oder ausgeschaltet wird. Die Komponenten
+                werden durch einen Arduino UNO R3 Mikrocontroller gesteuert.
+                Mehr Informationen über die einzelnen Bauteile finden Sie in
+                einem Ordner mit dem Namen "include" in meinem
+                GitHub-Repository, dessen Link unten auf der Website zu finden
+                ist.
+              </p>
+            ) : (
+              <p className="text-slate-200 mt-3 lg:w-[500px]">
+                An intrusion alarm continuously checks the state of a Reed
+                sensor. By inputting a code consisting of four digits using an
+                infrared controller, the alarm can be switched off. The state of
+                the input is displayed on an LCD screen, which will be turned
+                off when not needed, using transistor logic. This project uses
+                an Arduino UNO R3 microcontroller. You will find more details
+                about the components in the image in the /include folder in my
+                GitHub repository, which is linked in the footer of the website.
+              </p>
+            )}
+          </div>
+        </div>
       </div>
     );
   }
