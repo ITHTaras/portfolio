@@ -62,7 +62,7 @@ function MyWork() {
               >
                 <div className="w-full h-[562px] lg:h-full max-h-[562px] relative">
                   <Image
-                    className="rounded-xl object-cover object-top"
+                    className="rounded-xl object-cover object-top !relative"
                     src={project.img}
                     fill
                     alt=""
@@ -133,6 +133,64 @@ function MyWork() {
                 <div className="w-full flex justify-between">
                   <p className="text-gray-300 text-sm max-w-[73%] leading-6">
                     {langs[lang].intrusionAlarm}
+                  </p>
+                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-[48px] min-h-[48px] max-w-[48px] max-h-[48px] bg-[#6f848e] rotate-45">
+                    <FontAwesomeIcon icon={faArrowUp} className="text-[17px]" />
+                  </h2>
+                </div>
+              </Link>
+            );
+          } else if (project.alias === "reaction") {
+            return (
+              <Link
+                href={project.url}
+                key={project.alias}
+                className="flex flex-col items-center"
+              >
+                <div className="w-full h-[562px] lg:h-full max-h-[562px] relative">
+                  <Image
+                    className="rounded-xl object-cover object-top"
+                    src={project.img}
+                    fill
+                    alt=""
+                  />
+                </div>
+                <hr
+                  style={{ height: 1 }}
+                  className="w-full mt-4 mb-2 border-none bg-gray-300 bg-opacity-50"
+                />
+                <div className="w-full flex justify-between">
+                  <p className="text-gray-300 text-sm max-w-[73%] leading-6">
+                    {langs[lang].reaction}
+                  </p>
+                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-[48px] min-h-[48px] max-w-[48px] max-h-[48px] bg-[#6f848e] rotate-45">
+                    <FontAwesomeIcon icon={faArrowUp} className="text-[17px]" />
+                  </h2>
+                </div>
+              </Link>
+            );
+          }else if (project.alias === "random") {
+            return (
+              <Link
+                href={project.url}
+                key={project.alias}
+                className="flex flex-col items-center"
+              >
+                <div className="w-full h-[562px] lg:h-full max-h-[562px] relative">
+                  <Image
+                    className="rounded-xl object-cover object-top"
+                    src={project.img}
+                    fill
+                    alt=""
+                  />
+                </div>
+                <hr
+                  style={{ height: 1 }}
+                  className="w-full mt-4 mb-2 border-none bg-gray-300 bg-opacity-50"
+                />
+                <div className="w-full flex justify-between">
+                  <p className="text-gray-300 text-sm max-w-[73%] leading-6">
+                    {langs[lang].random}
                   </p>
                   <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-[48px] min-h-[48px] max-w-[48px] max-h-[48px] bg-[#6f848e] rotate-45">
                     <FontAwesomeIcon icon={faArrowUp} className="text-[17px]" />

@@ -152,6 +152,39 @@ function project({ params }) {
         </div>
       </div>
     );
+  } else if (project && project.alias === "reaction") {
+    return (
+      <div className="px-8 md:px-20">
+        <div className="md:grid md:grid-cols-12 md:gap-4 lg:h-[80vh]">
+          <div className="relative max-md:h-[70vh] w-full col-span-5">
+            <Image
+              className="object-contain h-[auto!important] max-h-full"
+              src={project.img}
+              fill
+              alt=""
+            />
+          </div>
+          <div className="max-md:mt-8 max-md:text-center max-md:px-6 md:col-span-7">
+            {lang == "de" ? (
+              <p className="text-slate-200 mt-3 lg:w-[500px]">
+                Das Reaktionsspiel besteht aus einer einfachen Verzögerung mithilfe eines NE555
+                Timers. Der Timer wird beim Anlegen der Versorgungsspannung aktiviert und nach einer
+                bestimmten Zeitspanne den 2. Timer auslösen, der in einem astabilen Modus arbeitet.
+                Somit wird mit einer hohen Frequenz ein Signal erzeugt, das einen Zähler ansteuert und somit die Zahl auf der Segmentanzeige erhöht. 
+                Sobald der Spieler den Knopf drückt, wird der Zähler zurückgesetzt und die Zeit, die der Spieler benötigt hat, auf die Anzeige übertragen.
+              </p>
+            ) : (
+              <p className="text-slate-200 mt-3 lg:w-[500px]">
+                The reaction game consists of a simple delay using a NE555 timer.
+The timer is activated after the application of the supply voltage and, after a certain period, triggers a second timer operating in an astable mode.
+This generates a high frequency signal, which drives a counter and increases the number on a segment display.
+As soon as the player presses a button, the counter is reset and the time the player needed is shown.
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
