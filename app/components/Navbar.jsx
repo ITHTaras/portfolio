@@ -46,12 +46,12 @@ function Navbar() {
       <div
         className={`${
           menuOpened ? "" : "hidden"
-        } text-slate-300 pt-5 bg-gradient-to-b from-gray-900 to-slate-800 fixed left-0 top-0 w-screen h-screen z-[51]`}
+        } text-slate-300 pt-5 bg-linear-to-b from-gray-900 to-slate-800 fixed left-0 top-0 w-screen h-screen z-51`}
       >
         <button className="ml-5 w-16 h-16" onClick={() => setMenuOpened(false)}>
           <img src="/images/x-mark.svg" alt="" />
         </button>
-        <div className="w-full mt-3 h-[2px] bg-[#94a3b8]"></div>
+        <div className="w-full mt-3 h-0.5 bg-[#94a3b8]"></div>
         <div className="ml-9 mt-4">
           <h1
             className="mt-4 text-2xl font-semibold"
@@ -83,16 +83,11 @@ function Navbar() {
         <div className="hidden lg:flex justify-center items-center">
           <PathLink path="/" text={langs[lang].home} />
           {pathname === "/" ? (
-            <button onClick={scrolly} className="text-gray-300">
+            <button onClick={scrolly} className="text-gray-300 nav-link cursor-pointer">
               {langs[lang].projects}
             </button>
-          ) : pathname === "/projects/ecolife" ||
-            pathname === "/projects/real-estate" ? (
+          ) :  (
             <h2 className="text-gray-100 opacity-20">{langs[lang].projects}</h2>
-          ) : (
-            <Link className="text-gray-300 nav-link" href="/">
-              {langs[lang].projects}
-            </Link>
           )}
         </div>
         {/* Email */}
@@ -102,7 +97,7 @@ function Navbar() {
             onClick={() => setLang("de")}
             className={
               lang === "en"
-                ? "text-lg text-gray-300"
+                ? "text-lg text-gray-300 cursor-pointer"
                 : "text-lg text-gray-100 opacity-30"
             }
           >
@@ -114,7 +109,7 @@ function Navbar() {
             onClick={() => setLang("en")}
             className={
               lang === "de"
-                ? "text-lg text-gray-300"
+                ? "text-lg text-gray-300 cursor-pointer"
                 : "text-lg text-gray-100 opacity-30"
             }
           >
@@ -140,7 +135,7 @@ function Navbar() {
           onClick={() => setMenuOpened(true)}
           className="flex items-center lg:hidden"
         >
-          <h1 className="mr-4 text-gray-300">Menu</h1>
+          <h1 className="mr-4 text-gray-300">{langs[lang].menu}</h1>
           <Image src={menu} alt="Menu" width={27} height={24} />
         </button>
       </div>

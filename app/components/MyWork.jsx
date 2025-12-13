@@ -25,7 +25,7 @@ function MyWork() {
       </h1>
       <div className="flex flex-col md:flex-row justify-between">
         <p className="mt-3 lg:w-[500px]">{langs[lang].projectsDesc}</p>
-        <div className="flex justify-start min-md:self-end gap-x-10 overflow-x-scroll hide-scrollbar mt-3 md:mt-0">
+        <div className="flex justify-start md:self-end gap-x-10 overflow-x-scroll hide-scrollbar mt-3 md:mt-0">
           <button
             onClick={() => setCategory("electronics")}
             className="flex items-center"
@@ -62,7 +62,7 @@ function MyWork() {
               >
                 <div className="w-full h-[562px] lg:h-full max-h-[562px] relative">
                   <Image
-                    className="rounded-xl object-cover object-top !relative"
+                    className="rounded-xl object-cover object-top relative!"
                     src={project.img}
                     fill
                     alt=""

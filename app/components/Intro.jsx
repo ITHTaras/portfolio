@@ -16,15 +16,16 @@ function Intro() {
   };
 
   return (
-    <div className="w-full h-first-section flex flex-col items-center">
-      <div className="flex flex-col lg:flex-row text-gray-200 justify-start items-center">
-        <Image
-          className="rounded-full object-contain lg:mr-24"
-          width={400}
-          height={400}
-          src="/images/my-photo.jpg"
-          alt=""
-        />
+    <div className="w-full flex flex-col items-center">
+      <div className="flex flex-col md:flex-row text-gray-200 justify-start items-center">
+        <div className="w-100 lg:mr-24">
+          <Image
+            className="rounded-full object-contain pos-relative"
+            src="/images/portrait.jpg"
+            alt=""
+            fill
+          />
+        </div>
         <div className="lg:ml-8 mt-10 max-lg:text-center">
           <h6 className="text-xl">{langs[lang].hi}</h6>
           <h2 className="text-5xl mt-3">Taras Hornik,</h2>
@@ -35,7 +36,7 @@ function Intro() {
       </div>
       <button
         onClick={scrolly}
-        className="w-14 h-14 rounded-full flex justify-center items-center mt-20 bg-white/20 drop-shadow-[0_0_20px_rgba(240,237,253,0.78)]"
+        className="w-14 h-14 rounded-full flex justify-center items-center mt-20 cursor-pointer bg-white/20 drop-shadow-[0_0_20px_rgba(240,237,253,0.78)]"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
