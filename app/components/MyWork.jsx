@@ -24,11 +24,11 @@ function MyWork() {
         {lang === "de" ? "Projekte" : "My Work"}
       </h1>
       <div className="flex flex-col md:flex-row justify-between">
-        <p className="mt-3 lg:w-[500px]">{langs[lang].projectsDesc}</p>
+        <p className="mt-3 lg:w-125">{langs[lang].projectsDesc}</p>
         <div className="flex justify-start md:self-end gap-x-10 overflow-x-scroll hide-scrollbar mt-3 md:mt-0">
           <button
             onClick={() => setCategory("electronics")}
-            className="flex items-center"
+            className="flex items-center cursor-pointer"
           >
             <FontAwesomeIcon
               icon={faMicrochip}
@@ -38,7 +38,7 @@ function MyWork() {
           </button>
           <button
             onClick={() => setCategory("fullstack")}
-            className="flex items-center"
+            className="flex items-center cursor-pointer"
           >
             <FontAwesomeIcon icon={faPalette} className="mr-2 text-blue-500" />
             <h6>Fullstack</h6>
@@ -60,10 +60,10 @@ function MyWork() {
                 key={project.alias}
                 className="flex flex-col items-center"
               >
-                <div className="w-full h-[562px] lg:h-full max-h-[562px] relative">
+                <div className="w-full h-140.5 lg:h-full max-h-88">
                   <Image
-                    className="rounded-xl object-cover object-top relative!"
-                    src={project.img}
+                    className="rounded-xl object-cover object-top pos-relative "
+                    src={project.imgs[0]}
                     fill
                     alt=""
                   />
@@ -73,10 +73,10 @@ function MyWork() {
                   className="w-full mt-4 mb-2 border-none bg-gray-300 bg-opacity-50"
                 />
                 <div className="w-full flex justify-between">
-                  <p className="text-gray-300 text-sm max-w-[73%] leading-6">
+                  <p className="text-gray-300 text-sm max-w-[73%]">
                     {langs[lang].ecolife}
                   </p>
-                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-[48px] min-h-[48px] max-w-[48px] max-h-[48px] bg-[#6f848e] rotate-45">
+                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-12 min-h-12 max-w-12 max-h-12 bg-[#6f848e] rotate-45">
                     <FontAwesomeIcon icon={faArrowUp} className="text-[17px]" />
                   </h2>
                 </div>
@@ -89,10 +89,10 @@ function MyWork() {
                 key={project.alias}
                 className="flex flex-col items-center col-span-2 h-fit"
               >
-                <div className="w-full max-h-[562px]">
+                <div className="w-full max-h-88">
                   <Image
-                    className="rounded-xl object-cover object-top pos-relative"
-                    src={project.img}
+                    className="rounded-xl object-cover object-top pos-relative "
+                    src={project.imgs[0]}
                     fill
                     alt=""
                   />
@@ -105,7 +105,7 @@ function MyWork() {
                   <p className="text-gray-300 text-sm max-w-[73%] leading-6">
                     {langs[lang].realestate}
                   </p>
-                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-[48px] min-h-[48px] max-w-[48px] max-h-[48px] bg-[#6f848e] rotate-45">
+                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-12 min-h-12 max-w-12 max-h-12 bg-[#6f848e] rotate-45">
                     <FontAwesomeIcon icon={faArrowUp} className="text-[17px]" />
                   </h2>
                 </div>
@@ -118,10 +118,10 @@ function MyWork() {
                 key={project.alias}
                 className="flex flex-col items-center col-span-2 h-fit"
               >
-                <div className="w-full h-[562px] max-h-[562px]">
+                <div className="w-full h-140.5 max-h-88">
                   <Image
-                    className="rounded-xl object-cover object-top pos-relative"
-                    src={project.img}
+                    className="rounded-xl object-cover pos-relative "
+                    src={project.imgs[0]}
                     fill
                     alt=""
                   />
@@ -134,7 +134,7 @@ function MyWork() {
                   <p className="text-gray-300 text-sm max-w-[73%] leading-6">
                     {langs[lang].intrusionAlarm}
                   </p>
-                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-[48px] min-h-[48px] max-w-[48px] max-h-[48px] bg-[#6f848e] rotate-45">
+                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-12 min-h-12 max-w-12 max-h-12 bg-[#6f848e] rotate-45">
                     <FontAwesomeIcon icon={faArrowUp} className="text-[17px]" />
                   </h2>
                 </div>
@@ -147,10 +147,10 @@ function MyWork() {
                 key={project.alias}
                 className="flex flex-col items-center"
               >
-                <div className="w-full h-[562px] lg:h-full max-h-[562px] relative">
+                <div className="w-full h-140.5 lg:h-full max-h-88">
                   <Image
-                    className="rounded-xl object-cover object-top"
-                    src={project.img}
+                    className="rounded-xl object-cover object-top pos-relative "
+                    src={project.imgs[0]}
                     fill
                     alt=""
                   />
@@ -163,23 +163,23 @@ function MyWork() {
                   <p className="text-gray-300 text-sm max-w-[73%] leading-6">
                     {langs[lang].reaction}
                   </p>
-                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-[48px] min-h-[48px] max-w-[48px] max-h-[48px] bg-[#6f848e] rotate-45">
+                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-12 min-h-12 max-w-12 max-h-12 bg-[#6f848e] rotate-45">
                     <FontAwesomeIcon icon={faArrowUp} className="text-[17px]" />
                   </h2>
                 </div>
               </Link>
             );
-          }else if (project.alias === "random") {
+          } else if (project.alias === "random") {
             return (
               <Link
                 href={project.url}
                 key={project.alias}
                 className="flex flex-col items-center"
               >
-                <div className="w-full h-[562px] lg:h-full max-h-[562px] relative">
+                <div className="w-full h-140.5 lg:h-full max-h-88">
                   <Image
-                    className="rounded-xl object-cover object-top"
-                    src={project.img}
+                    className="rounded-xl object-cover object-top pos-relative "
+                    src={project.imgs[0]}
                     fill
                     alt=""
                   />
@@ -192,7 +192,7 @@ function MyWork() {
                   <p className="text-gray-300 text-sm max-w-[73%] leading-6">
                     {langs[lang].random}
                   </p>
-                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-[48px] min-h-[48px] max-w-[48px] max-h-[48px] bg-[#6f848e] rotate-45">
+                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-12 min-h-12 max-w-12 max-h-12 bg-[#6f848e] rotate-45">
                     <FontAwesomeIcon icon={faArrowUp} className="text-[17px]" />
                   </h2>
                 </div>

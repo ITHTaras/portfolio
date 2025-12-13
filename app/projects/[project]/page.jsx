@@ -8,51 +8,44 @@ import React, { useContext } from "react";
 function project({ params }) {
   const { lang } = useContext(GlobalContext);
   let arrayLang = lang === "de" ? 0 : 1;
-  const project = projects.find((project) => project.alias === React.use(params).project);
+  const project = projects.find(
+    (project) => project.alias === React.use(params).project
+  );
 
-  if (!project) notFound(); else {
-      return (<div className="px-8 md:px-20">
+  if (!project) notFound();
+  else {
+    return (
+      <div className="px-8 md:px-20">
         <div className="md:grid md:grid-cols-12 md:gap-4 md:h-[80vh]">
           <div className="relative w-full max-md:h-[70vh] max-h-full col-span-5">
             <Image
               className="object-contain h-[auto!important] max-h-full"
-              src={project.img}
+              src={project.imgs[0]}
               fill
               alt=""
             />
           </div>
           <div className="max-md:mt-8 max-md:text-center max-md:px-6 md:col-span-7">
-              <p className="text-slate-200 mt-3 lg:w-125" dangerouslySetInnerHTML={{ __html: projects[id[project.alias]].description[arrayLang] }}></p>
+            <p
+              className="text-slate-200 mt-3 lg:w-125"
+              dangerouslySetInnerHTML={{
+                __html: projects[id[project.alias]].description[arrayLang],
+              }}
+            ></p>
           </div>
         </div>
         <div className="mt-10 h-[240vh] md:h-screen md:flex md:gap-5 md:justify-between">
-          <div className="max-md:mt-4 relative h-[80vh] w-full">
-            <Image
-              className="object-contain"
-              fill
-              alt=""
-              src="/images/ecolife_1.jpg"
-            />
-          </div>
-          <div className="max-md:mt-4 relative h-[80vh] w-full">
-            <Image
-              className="object-contain"
-              fill
-              alt=""
-              src="/images/ecolife_2.jpg"
-            />
-          </div>
-          <div className="max-md:mt-4 relative h-[80vh] w-full">
-            <Image
-              className="object-contain"
-              fill
-              alt=""
-              src="/images/ecolife_3.jpg"
-            />
-          </div>
+          {project.imgs.slice(1).map((img) => {
+            return (
+              <div key={img} className="max-md:mt-4 relative h-[80vh] w-full">
+                <Image className="object-contain" fill alt="" src={img} />
+              </div>
+            );
+          })}
         </div>
-      </div>)
-  }  
+      </div>
+    );
+  }
 }
 
 export default project;

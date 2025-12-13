@@ -24,6 +24,7 @@ function Intro() {
             src="/images/portrait.jpg"
             alt=""
             fill
+            sizes="(max-width: 768px) 40vw, (max-width: 1200px) 30vw"
           />
         </div>
         <div className="lg:ml-8 mt-10 max-lg:text-center">
