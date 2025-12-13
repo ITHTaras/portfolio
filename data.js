@@ -27,7 +27,7 @@ const projects = [
       "Für den Zufallsgenerator wurde die Mangelhaftigkeit der menschlichen Reaktionszeit ausgenutzt: die Konstellation der leuchtenden LEDs verändert sich zyklisch mit einer Frequenz von 5kHz und gewährleistet somit die Ausgabe eines Ergebnisses, das jedes Mal von der Tastehaltedauer stark abhängig ist. Wird der Taster losgelassen, so wird der letzte Zahlenwert abgebildet.",
       "The randomiser is based on the deficits of the human reaction time: the current dice count oscillates with a frequency of 5kHz, what makes it impossible for us to see the current count number when the button is pressed. When the button is released, the counter stops and its value is being saved.",
     ],
-    imgs: ["/images/random.png"],
+    imgs: ["/images/random.PNG"],
   },
   {
     alias: "real-estate",
