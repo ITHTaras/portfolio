@@ -2,7 +2,7 @@
   "home": "Home",
   "projects": "My Work",
   "hi": "Hello! I am",
-  "aboutMe": "an apprentice in the field of automation technology. I specialize on radio and digital technology.",
+  "aboutMe": "an apprentice in the field of automation technology",
   "projectsDesc": "Here are some examples of my work.",
   "ecolife": "Mobile App \"EcoLife\"",
   "realestate": "Real-estate website for apartment renting",
@@ -12,5 +12,6 @@
   "more": "More This Way",
   "tech": "Tech Stack",
   "electronics": "Electronics",
-  "menu": "Menu"
+  "menu": "Menu",
+  "distance": "Distance measurement"
 }

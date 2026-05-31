@@ -116,7 +116,7 @@ function MyWork() {
               <Link
                 href={project.url}
                 key={project.alias}
-                className="flex flex-col items-center col-span-2 h-fit"
+                className="flex flex-col items-center h-fit"
               >
                 <div className="w-full h-140.5 max-h-88">
                   <Image
@@ -174,7 +174,7 @@ function MyWork() {
               <Link
                 href={project.url}
                 key={project.alias}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center col-span-2"
               >
                 <div className="w-full h-140.5 lg:h-full max-h-88">
                   <Image
@@ -191,6 +191,35 @@ function MyWork() {
                 <div className="w-full flex justify-between">
                   <p className="text-gray-300 text-sm max-w-[73%] leading-6">
                     {langs[lang].random}
+                  </p>
+                  <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-12 min-h-12 max-w-12 max-h-12 bg-[#6f848e] rotate-45">
+                    <FontAwesomeIcon icon={faArrowUp} className="text-[17px]" />
+                  </h2>
+                </div>
+              </Link>
+            );
+          } else if (project.alias === "distance") {
+            return (
+              <Link
+                href={project.url}
+                key={project.alias}
+                className="flex flex-col items-center col-span-2"
+              >
+                <div className="w-full h-140.5 lg:h-full max-h-88">
+                  <Image
+                    className="rounded-xl object-cover object-top pos-relative "
+                    src={project.imgs[0]}
+                    fill
+                    alt=""
+                  />
+                </div>
+                <hr
+                  style={{ height: 1 }}
+                  className="w-full mt-4 mb-2 border-none bg-gray-300 bg-opacity-50"
+                />
+                <div className="w-full flex justify-between">
+                  <p className="text-gray-300 text-sm max-w-[73%] leading-6">
+                    {langs[lang].distance}
                   </p>
                   <h2 className="flex text-gray-600 justify-center items-center rounded-full min-w-12 min-h-12 max-w-12 max-h-12 bg-[#6f848e] rotate-45">
                     <FontAwesomeIcon icon={faArrowUp} className="text-[17px]" />

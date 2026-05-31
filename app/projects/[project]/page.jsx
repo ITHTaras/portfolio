@@ -16,10 +16,10 @@ function project({ params }) {
   else {
     return (
       <div className="px-8 md:px-20">
-        <div className="md:grid md:grid-cols-12 md:gap-4 md:h-[80vh]">
-          <div className="relative w-full max-md:h-[70vh] max-h-full col-span-5">
+        <div className="md:grid md:grid-cols-12 md:gap-4">
+          <div className="relative w-full max-h-full col-span-5">
             <Image
-              className="object-contain h-[auto!important] max-h-full"
+              className="object-contain h-[auto!important] max-h-full pos-relative"
               src={project.imgs[0]}
               fill
               alt=""

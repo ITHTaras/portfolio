@@ -18,7 +18,7 @@ function Intro() {
   return (
     <div className="w-full flex flex-col items-center">
       <div className="flex flex-col md:flex-row text-gray-200 justify-start items-center">
-        <div className="w-100 lg:mr-24">
+        <div className="w-96 lg:mr-24">
           <Image
             className="rounded-full object-contain pos-relative"
             src="/images/portrait.jpg"

@@ -116,7 +116,7 @@ function Navbar() {
             EN
           </button>
           <Link
-            href="mailto:tarasgorniko@gmail.com"
+            href="mailto:taras.hornik@roche.com"
             className="hidden lg:block w-14 h-14 lg:ml-9"
           >
             <svg

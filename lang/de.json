@@ -3,8 +3,8 @@
   "projects": "Projekte",
   "about": "Über mich",
   "hi": "Hallo! Ich bin",
-  "aboutMe": "Ein Auszubildender als Elektroniker für Automatisierungstechnik. Meine Schwerpunkte sind Radio- und Digitaltechnik.",
-  "projectsDesc": "Ein Teil meiner Arbeit. Klicken, um mehr davon zu sehen",
+  "aboutMe": "Ein Auszubildender als Elektroniker für Automatisierungstechnik",
+  "projectsDesc": "Ein Bisschen über Projekte aus meiner Freizeit",
   "ecolife": "App \"EcoLife\"",
   "realestate": "Eine Website für Wohnungssuche",
   "intrusionAlarm": "Ein digitaler Einbruchsalarm",
@@ -13,5 +13,6 @@
   "more": "Mehr davon",
   "tech": "Tech Stack",
   "electronics": "Elektronik",
-  "menu": "Menü"
+  "menu": "Menü",
+  "distance": "Abstandsmessung"
 }

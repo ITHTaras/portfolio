@@ -1,5 +1,15 @@
 const projects = [
   {
+    alias: "distance",
+    url: "/projects/distance",
+    cat: "electronics",
+    description: [
+      "Die Schaltung misst die Entfernung von einem Ultraschallsensor. Wenn der Sensorausgang aktiv ist, wird mithilfe eines Zählers mit einer Frequenz von 17,8 kHz die Entfernung in cm gemessen.",
+      "The circuit measures the distance from an ultrasonic sensor. When the sensor output is active, a counter with a frequency of 17.8 kHz is used to measure the distance in cm.",
+    ],
+    imgs: ["/images/distance.jpeg"],
+  },
+  {
     alias: "intrusion-alarm",
     url: "/projects/intrusion-alarm",
     cat: "electronics",
@@ -40,7 +50,7 @@ const projects = [
     url: "/projects/ecolife",
     cat: "fullstack",
     description: [
-      "Das App „EcoLife“ habe ich als meine zweite wissenschaftliche Arbeit gemacht Es wurde später auch in einem ukrainischen Wettbewerb präsentiert\n<a class=' text-blue-300' href='/Wettbewerburkunde.pdf'> (siehe die Urkunde) </a> . <br /> Das der Anwendung – die Umgebung zu verbessern. Darüber hinaus kann man sich über Arten des Abfalls und der Recyclingvorschrifte informieren.",
+      "Das App „EcoLife“ habe ich als meine zweite wissenschaftliche Arbeit gemacht Es wurde später auch in einem ukrainischen Wettbewerb präsentiert\n<a class=' text-blue-300' href='/Wettbewerburkunde.pdf'> (siehe die Urkunde) </a> . <br /> Das Ziel – die Umwelt zu verbessern. Darüber hinaus kann man sich über Arten des Abfalls und der Recyclingvorschrifte informieren.",
       "The mobile app \"EcoLife\" was my second scientific research. A bit later it was presented at informatics competition in Ukraine <a class='text-blue-300' href='/Wettbewerburkunde.pdf'>(see the certificate)</a>.<br />The purpose of the app is to make the enviroment better. There is a possibility to view different types of waste and the instructions for utilization of it.",
     ],
     imgs: [
@@ -53,9 +63,10 @@ const projects = [
 ];
 
 let id = {
-  "intrusion-alarm": 0,
-  reaction: 1,
-  random: 2,
-  ecolife: 4,
+  "intrusion-alarm": 1,
+  reaction: 2,
+  random: 3,
+  ecolife: 5,
+  distance: 0,
 };
 export { projects, id };
